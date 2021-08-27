@@ -1,0 +1,7 @@
+{
+  "name": "ta-sys-online-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

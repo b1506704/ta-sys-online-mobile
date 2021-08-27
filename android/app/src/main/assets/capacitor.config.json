@@ -1,0 +1,9 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ta-sys-online-mobile",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://192.168.1.8:8100"
+	}
+}

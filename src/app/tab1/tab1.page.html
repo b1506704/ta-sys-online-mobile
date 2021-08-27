@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input
+      [autofocus]="true"
+      [clearInput]="true"
+      [color]="'secondary'"
+      [minlength]="1"
+      [placeholder]="'Enter your username'"
+      [required]="true"
+      (ionChange)="onUsernameValueChanged($event)"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input
+      [clearInput]="true"
+      [color]="'secondary'"
+      [minlength]="1"
+      [type]="'password'"
+      [placeholder]="'Enter your password'"
+      [required]="true"
+      (ionChange)="onPasswordValueChanged($event)"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Role</ion-label>
+    <ion-select
+      placeholder="Select Role"
+      [value]="'Admin'"
+      [okText]="'OK'"
+      [cancelText]="'Cancel'"
+      (ionChange)="onRoleValueChanged($event)"
+    >
+      <ion-select-option value="Admin">Admin</ion-select-option>
+      <ion-select-option value="Learner">Learner</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button
+    [color]="'primary'"
+    [expand]="'full'"
+    [size]="'large'"
+    [strong]="'true'"
+    (click)="onSubmit()"
+    >Login</ion-button
+  >
+</ion-content>
