@@ -34,19 +34,6 @@
       (ionChange)="onPasswordValueChanged($event)"
     ></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label>Role</ion-label>
-    <ion-select
-      placeholder="Select Role"
-      [value]="'Admin'"
-      [okText]="'OK'"
-      [cancelText]="'Cancel'"
-      (ionChange)="onRoleValueChanged($event)"
-    >
-      <ion-select-option value="Admin">Admin</ion-select-option>
-      <ion-select-option value="Learner">Learner</ion-select-option>
-    </ion-select>
-  </ion-item>
   <ion-button
     [color]="'primary'"
     [expand]="'full'"

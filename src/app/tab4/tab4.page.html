@@ -43,8 +43,11 @@
       [cancelText]="'Cancel'"
       (ionChange)="onRoleValueChanged($event)"
     >
-      <ion-select-option value="Admin">Admin</ion-select-option>
-      <ion-select-option value="Learner">Learner</ion-select-option>
+      <ng-container *ngIf="roleList">
+        <ion-select-option *ngFor="let item of roleList;" [value]="item?.id"
+          >{{item?.name}}
+        </ion-select-option>
+      </ng-container>
     </ion-select>
   </ion-item>
   <ion-button

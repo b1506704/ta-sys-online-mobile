@@ -1,27 +1,25 @@
 import { Component } from '@angular/core';
-
+import { AuthService } from '../shared/services/auth.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
   userData: any = {
-    userName: '',
-    passWord: '',
-    role:''
+    username: '',
+    password: '',
   };
-  constructor() {}
+  constructor(private authService: AuthService) {}
   onUsernameValueChanged(e: any) {
-    this.userData.userName = e.detail.value;
+    this.userData.username = e.detail.value;
   }
   onPasswordValueChanged(e: any) {
-    this.userData.passWord = e.detail.value;
+    this.userData.password = e.detail.value;
   }
-  onRoleValueChanged(e: any) {
-    this.userData.role = e.detail.value;
-  }
+
   onSubmit() {
     console.log(this.userData);
+    this.authService.sendLoginRequest(this.userData);
   }
 }
